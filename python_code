@@ -1,0 +1,36 @@
+import random
+
+print("Welcome to Rock, Paper, Scissors!")
+
+# Define the three options
+options = ["rock", "paper", "scissors"]
+
+# Prompt the user to make a choice
+user_choice = input("Choose rock, paper, or scissors: ").lower()
+
+# Generate a random choice for the computer
+computer_choice = random.choice(options)
+
+# Print the computer's choice
+print("The computer chose", computer_choice)
+
+# Determine the winner
+if user_choice == computer_choice:
+    print("It's a tie!")
+elif user_choice == "rock":
+    if computer_choice == "paper":
+        print("You lose!")
+    else:
+        print("You win!")
+elif user_choice == "paper":
+    if computer_choice == "scissors":
+        print("You lose!")
+    else:
+        print("You win!")
+elif user_choice == "scissors":
+    if computer_choice == "rock":
+        print("You lose!")
+    else:
+        print("You win!")
+else:
+    print("Invalid choice. Please try again.")
